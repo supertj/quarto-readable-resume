@@ -102,7 +102,7 @@ text. [template.qmd](template.qmd) is a full one-page example.
 ## Fonts
 
 The design uses Georgia, which comes with Windows and macOS, so on those
-systems it looks exactly like the original with nothing to install. Where
+systems there's nothing to install. Where
 Georgia isn't available, such as on Linux, Typst warns about the missing font
 and falls back to Libertinus Serif, which ships with Typst. For something
 closer to Georgia there, install Gelasio (free on Google Fonts, drawn to
