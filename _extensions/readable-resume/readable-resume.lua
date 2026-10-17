@@ -32,7 +32,11 @@ function Meta(meta)
     end
     local strings = {}
     for _, item in ipairs(items) do
-      table.insert(strings, typst_string(stringify(item)))
+      -- A blanked-out "- " line would otherwise leave a stray " | "
+      local text = stringify(item)
+      if text ~= "" then
+        table.insert(strings, typst_string(text))
+      end
     end
     if #strings == 0 then
       -- "(,)" is a syntax error in Typst; leave the template's default instead
