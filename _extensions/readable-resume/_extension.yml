@@ -1,0 +1,14 @@
+title: Readable Resume
+author: Super Lede
+version: 0.1.0
+quarto-required: ">=1.7.0"
+contributes:
+  formats:
+    typst:
+      # Quarto numbers Typst pages by default; the design has no page number.
+      page-numbering: false
+      filters:
+        - readable-resume.lua
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
