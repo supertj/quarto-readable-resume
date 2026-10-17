@@ -5,9 +5,9 @@ section headings over a thin rule, education first. It's the Classic template
 from [ReadableResume](https://readableresume.com), where the same design is
 available for Google Docs and Word.
 
-Everything sits in one column and reads top to bottom. There are no tables,
-text boxes or icons, so applicant tracking systems get the text out in the
-right order.
+Everything sits in one column with no tables, text boxes or icons, so the text
+comes out of the PDF in reading order. That's the text applicant tracking
+systems parse.
 
 [![The sample resume rendered with this format](preview.png)](template.pdf)
 
