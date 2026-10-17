@@ -34,8 +34,13 @@ function Meta(meta)
     for _, item in ipairs(items) do
       table.insert(strings, typst_string(stringify(item)))
     end
-    -- The trailing comma keeps a single item an array in Typst.
-    meta.contact = pandoc.RawInline("typst", "(" .. table.concat(strings, ", ") .. ",)")
+    if #strings == 0 then
+      -- "(,)" is a syntax error in Typst; leave the template's default instead
+      meta.contact = nil
+    else
+      -- The trailing comma keeps a single item an array in Typst.
+      meta.contact = pandoc.RawInline("typst", "(" .. table.concat(strings, ", ") .. ",)")
+    end
   end
   return meta
 end
